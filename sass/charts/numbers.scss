@@ -1,0 +1,158 @@
+$n1:  #26BB5D;
+$n2:  #259E7C;
+$n3:  #24819B;
+$n4:  #2364BA;
+$n5:  #2347D9;
+$n6:  #503FC1;
+$n7:  #7E37A9;
+$n8:  #AB2F91;
+$n9:  #D9277A;
+$n10: #D9274B;
+
+
+// Standard List with Red as first item
+
+ol {
+  counter-reset:li; /* Initiate a counter */
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  position: relative;
+}
+
+ol a:link, ol a:visited {
+ text-decoration: none;
+ color: #333;
+}
+
+ol a:hover {
+ text-decoration: none;
+ color: $n3;
+}
+
+ol > li {
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  margin: 0 0 6px 0;
+  padding: 5px 18px;
+  vertical-align: middle;
+  position:relative;
+  list-style:none;
+  white-space: nowrap;
+}
+
+.shelf ol > li {
+  text-align: left;
+  display: inline-block;
+  width: 145px;
+  vertical-align: text-top;
+  margin-bottom: 5px;
+  white-space: normal;
+}
+
+ol > li:first-child:before {
+  background-color: $n1; // first item in list is green
+}
+
+ol > li:before {
+  content:counter(li); /* Use the counter as content */
+  counter-increment:li; /* Increment the counter by 1 */
+  position:absolute;
+  // styling for number
+  top: 2px;
+  left: -2.1em;
+  background-color: #888;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  color: white;
+  text-align: center;
+  font-size: .9em;
+  line-height: 1.05em;
+  font-weight: 300;
+  padding: 6px 0 0 0;
+  margin-left: 15px;
+}
+
+// .Color List has a gradient of colors
+
+ol.color-list > li:nth-child(2):before { background-color: $n2; }
+ol.color-list > li:nth-child(3):before { background-color: $n3; }
+ol.color-list > li:nth-child(4):before { background-color: $n4; }
+ol.color-list > li:nth-child(5):before { background-color: $n5; }
+ol.color-list > li:nth-child(6):before { background-color: $n6; }
+ol.color-list > li:nth-child(7):before { background-color: $n7; }
+ol.color-list > li:nth-child(8):before { background-color: $n8; }
+ol.color-list > li:nth-child(9):before { background-color: $n9; }
+ol.color-list > li:nth-child(10):before { background-color: $n10; }
+
+// rank cirlce
+.rankChart ol > li:before {
+  width: 22px;
+  height: 22px;
+  line-height: .9em;
+  font-size: .8em;
+  padding: 6px 0 0 0;
+}
+
+// rank titles
+.rankChart ol > li {
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  margin: 0 0 6px 0;
+  padding: 4px 18px;
+  vertical-align: middle;
+  position:relative;
+  list-style:none;
+  white-space: nowrap;
+}
+
+// rank cirlce
+.rankChart .big ol > li:before {
+  top: 2px;
+  left: -2.1em;
+  background-color: #888;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  font-size: .9em;
+  line-height: 1.05em;
+  font-weight: 300;
+  padding: 6px 0 0 0;
+  margin-left: 15px;
+}
+
+// rank titles
+.rankChart .big ol > li {
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  margin: 0 0 6px 0;
+  padding: 5px 18px;
+  vertical-align: middle;
+  position:relative;
+  list-style:none;
+  white-space: nowrap;
+}
+
+// reverse order of negative numbers in ranking listings
+.rankChart ol.negative {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.rankChart ol.negative > li {
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.rankChart ol.negative > li:nth-child(1):before { background-color: $n10; }
+.rankChart ol.negative > li:nth-child(2):before { background-color: #888; }
+.rankChart ol.negative > li:nth-child(3):before { background-color: #888; }
+.rankChart ol.negative > li:nth-child(4):before { background-color: #888; }
+.rankChart ol.negative > li:nth-child(5):before { background-color: #888; }

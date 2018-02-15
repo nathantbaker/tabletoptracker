@@ -1,0 +1,341 @@
+// general imports
+@import 'icons';
+@import 'mailchimp';
+
+// chart assets
+@import 'charts/stats';
+@import 'charts/numbers';
+@import 'charts/shelf';
+@import 'charts/tables';
+
+// charts
+@import 'charts/top10';
+@import 'charts/movement';
+@import 'charts/hotness';
+
+$bgcolor: #ededed;
+$bgcolorDarker: #D9D9D9;
+$shadow: #888;
+
+/* ============================================================
+   Project:
+   Author:  Nathan T. Baker
+   Created:
+   Notes:   I did this while in Nashville Software School. 4e6679
+   ============================================================ */
+
+/* === GLOBAL === */
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+
+// .container {
+//   max-width: 1600px;
+// }
+
+#slot1, #slot2, #slot3, #slot4, #slot5, #slot6 {
+  background-color: white;
+  padding: 15px 30px 20px 30px;
+}
+
+/* === Headers === */
+
+header {
+  background-color: $bgcolor;
+  background: -moz-linear-gradient(top, $bgcolor 0%, $bgcolor 30%, $bgcolorDarker 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $bgcolor 0%,$bgcolor 30%,$bgcolorDarker 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $bgcolor 0%,$bgcolor 30%, $bgcolorDarker 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bgcolor', endColorstr='$bgcolorDarker',GradientType=0 ); /* IE6-9 */
+}
+
+footer {
+  background-color: #555;
+  padding: 10px 45px 10px 0;
+  color: #aaa;
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+footer p {
+  padding-top: 8px;
+}
+
+footer a, footer a:visited {
+  color: #b5d0e3;
+}
+
+footer a:hover {
+  color: white;
+}
+
+header {
+  padding: 20px 0 0 0;
+  margin: 0px;
+  width: 100%;
+}
+
+.pre-footer p, .pre-footer2 p {
+  padding-bottom: 15px;
+}
+
+.pre-footer {
+  background-color: #dee8ef;
+  padding: 20px 0;
+}
+
+.pre-footer2 {
+  background-color: #cbced3;
+  padding: 20px 0 5px 0;
+}
+
+.pre-footer ul, .pre-footer2 ul {
+  padding: 8px 0 0 20px;
+}
+
+.pre-footer li, .pre-footer2 li {
+  padding: 0 0 8px 0;
+}
+
+
+h2 {
+  padding: 8px 0;
+  margin: 0;
+  display: inline-block;
+  font-size: 1em;
+  color: #444;
+  font-family: helvetica, arial;
+}
+
+.pre-footer h2 {
+  padding: 10px 0;
+  margin: 0;
+  display: inline-block;
+  font-size: 2em;
+  font-family: helvetica, arial;
+  font-weight: 100;
+  color: #555;
+}
+
+.pre-footer2 h2{
+  padding: 10px 0;
+  display: inline-block;
+  font-size: 2em;
+  font-family: helvetica, arial;
+  font-weight: 100;
+  color: #555;
+}
+
+.pre-footer2 p {
+}
+
+#logo {
+}
+
+#big-logo {
+  padding: 0;
+}
+
+/*On medium*/
+@media screen and (max-width: 992px) {
+  #big-logo {
+    width: 80%;
+    margin: 0;
+    padding: 15px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .pre-footer h2 {
+  padding: 10px 0;
+  }
+}
+
+/*On medium*/
+@media screen and (max-width: 992px) {
+  .logo-wrapper {
+    text-align: center;
+  }
+}
+
+/*On medium*/
+@media screen and (max-width: 992px) {
+  #logo {
+    height: 65px;
+    margin: 5px 0 20px 0;
+  }
+}
+
+.logo-wrapper {
+
+}
+
+#tagline {
+}
+
+.social {
+  text-align: right;
+  color: grey;
+}
+
+#input {
+  height: 50px;
+  font-size: 1.5em;
+  padding: 0;
+  font-weight: 300;
+  margin: 0;
+}
+
+/*On medium*/
+@media screen and (max-width: 992px) {
+  #input {
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0;
+  }
+  .btn-secondary {
+    font-size: .9em;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+/*On small*/
+@media screen and (max-width: 768px) {
+  #input {
+    border-radius: 8px 8px 0 0;
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 0;
+  }
+  .btn-secondary {
+    border-radius: 0 0 8px 8px;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  .btn {
+    margin: 5px 0;
+  }
+
+  .help {
+    height: 28px;
+    padding: 0;
+  }
+}
+
+.nav-link {
+  background-color: #ccc;
+  height: 77px;
+}
+
+.nav-tabs {
+  padding: 0;
+  border-bottom: 0;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 0;
+}
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+/*@media (min-width: @screen-sm-min) { ... }*/
+
+/* Medium devices (desktops, 992px and up) */
+
+
+/* Large devices (large desktops, 1200px and up) */
+/*@media (min-width: @screen-lg-min) { ... }*/
+
+/* Large devices (large desktops, 1200px and up) */
+
+
+
+.nav-tabs a,
+.nav-tabs a:focus,
+.nav-tabs a:click,
+{
+  color: #555555;
+  background-color: #eee;
+  border-bottom: 0;
+}
+
+.nav-tabs .active, .nav-tabs .active:visited {
+  background-color: white;
+
+}
+
+.nav-tabs li {
+  padding: 0;
+  margin: 0;
+
+}
+
+.nav-tabs li a {
+ color: #333;
+ padding-top: 8px;
+}
+
+/* === Search === */
+
+.btn {
+  height: 50px;
+}
+
+.btn-secondary {
+  background-color: #b2cfe2;
+}
+
+
+/* === Login Button === */
+
+.abcRioButton {
+  width: 100% !important;
+  background-color: #eee !important;
+  border-radius: 15px !important;
+}
+
+
+ol {
+  margin: 0;
+  padding: 10px 0 0 15px;
+}
+
+li {
+
+}
+
+#bio-small {
+  padding: 0 10px 0 0;
+  margin: 0;
+  height: 35px;
+}
+
+.btn {
+  height: auto;
+}
+
+.btn-group {
+  padding: 0 5px;
+}
+
+.help-link {
+  color: grey;
+  font-size: .8em;
+  line-height: 2.4em;
+}
+
+span.at_flat_counter {
+  height: 32px;
+}
