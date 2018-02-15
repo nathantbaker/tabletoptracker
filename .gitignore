@@ -1,3 +1,6 @@
 .DS_Store
 elm-stuff
 repl-temp-*
+examples
+.sass-cache/
+*.css.map
