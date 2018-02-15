@@ -1,0 +1,35 @@
+/* === Icons === */
+
+$bgborder: #dddddd;
+
+.glyphicon-search {
+  color: $bgborder;
+  font-size: 2em;
+  position: absolute;
+  margin: 10px;
+}
+
+#settings {
+  padding: 8px 0;
+}
+
+/*On medium*/
+@media screen and (max-width: 992px) {
+  #settings {
+    margin-top: 10px;
+  }
+}
+
+
+.help {
+  opacity: .4;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  height: 25px;
+  padding: 0 5px;
+  margin: 4px 0 0 0;
+}
+
+.arrow-up {
+  width: 20px;
+  margin-left: 5px;
+}

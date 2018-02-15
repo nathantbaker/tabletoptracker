@@ -1,0 +1,165 @@
+
+<!-- Development index.html in root. Production index.ejs in public folder -->
+<html>
+  <head>
+    <title>Tabletop Tracker - Board Game Rankings Tracker</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Track which new board games deserve your attention among the thousands of games published each year by visualizing BoardGameGeek rankings data.">
+    <meta name="author" content="Nathan T. Baker">
+    <meta name="viewport" content="width=device-width, initial-scale=.95">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <meta property="og:title" content="Tabletop Tracker - Track board games on the rise" />
+    <meta property="og:description" content="Track which new board games deserve your attention among the thousands of games published each year." />
+    <meta property="og:url" content="http://www.tabletoptracker.com/" />
+    <meta property="og:image" content="/images/tabletop-tracker-screenshot.png" />
+    <meta name="google-site-verification" content="tLQ_d2-4O1-GwofennxLc3KWUVsTwDzWR-bPoDxLo8w" />
+  </head>
+  <body>
+    <header>
+      <!-- Logo/tagline/social share icons  -->
+      <div class="container">
+
+        <div class="col-md-1 col-xs-2">
+        </div>
+
+        <!-- Tabs -->
+        <div class="col-xs-10 col-sm-5 col-md-3">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><img id="logo" src="/images/tabletop-tracker.png" alt="Board Game Rankings"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-8 hidden-sm hidden-xs">
+        <h1>Track which board games are climbing in the rankings.</h1>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="container hidden-md hidden-lg">
+      <h1>Track which board games are climbing in the rankings.</h1>
+    </div>
+
+    <div class="container text-center" id="loading"><img src="/images/icons/loading.gif"/></div>
+
+    <div class="container" id="slot1"></div>
+    <div class="container" id="slot2"></div>
+    <div class="container" id="slot3"></div>
+    <div class="container" id="slot4"></div>
+    <div class="container" id="slot5"></div>
+
+    <div class="pre-footer">
+      <div class="container">
+        <!-- Footer Text -->
+        <div class="row">
+
+          <div class="col-md-4">
+
+            <!-- logo -->
+            <img id="big-logo" src="/images/tabletop-tracker-large.png" alt="Board Game Geek Stats">
+
+
+          </div>
+          <div class="col-md-4">
+
+            <!-- about text -->
+            <h2>About Tabletop Tracker</h2>
+            <p>Track which new board games deserve your attention among the thousands of games that are published each year.</p>
+
+          </div>
+          <div class="col-md-3">
+
+              <!-- email subscribe -->
+              <h2>Want More?</h2>
+              <p>Subscribe to learn when we release new charts and options.</p>
+          </div>
+
+            <div class="col-md-1">
+              <!-- Begin MailChimp Signup Form -->
+              <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+              <style type="text/css">
+                #mc_embed_signup{}
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+              </style>
+
+              <div id="mc_embed_signup">
+              <form action="//NathanTBaker.us7.list-manage.com/subscribe/post?u=a8efcfdba4e9e5abb6881b4cc&amp;id=a4ac35bfac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a8efcfdba4e9e5abb6881b4cc_a4ac35bfac" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                  </div>
+              </form>
+              </div>
+
+              <!--End mc_embed_signup-->
+
+          </div>
+
+          </div>
+
+      </div>
+    </div>
+
+    <!-- Pre Footer 2 -->
+    <div class="pre-footer2">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <h2>Help</h2>
+          <ul>
+            <li>Hover over a chart title to learn more about a chart.</li>
+            <li><a href="https://github.com/nathantbaker/tabletoptracker/issues">Report an issue.</a></li>
+            <li><a href="mailto:nathantbaker@gmail.com">Email me</a> to request a feature.</li>
+          </ul>
+
+          </div>
+
+          <div class="col-md-4">
+            <h2>About The Rankings</h2>
+            <p>Tabletop Tracker tracks which board games move the most in <a href="https://boardgamegeek.com/">BoardGameGeek</a> rankings. Rankings are based on the <a href="https://boardgamegeek.com/wiki/page/BoardGameGeek_FAQ#toc4"> Geek Rating</a>, which is the average of a game's user ratings, weighted for the number of it's ratings.</p>
+
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>Chart data was last calculated <strong id="time"></strong>. Data is calculated daily. </li>
+              <li>Tabletop Tracker is tracking all <strong id="totalGames"></strong>.</li>
+              <li>BoardGameGeek doesn't rank board games with less than <strong>30 user ratings</strong>.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-12">
+            <p><a href="http://nathantbaker.com">
+              <img id="bio-small" src="/images/nathan-t-baker.png" alt="Nathan T. Baker">
+            </a>
+            A project by <a href="http://nathantbaker.com">Nathan T. Baker</a> | <a href="https://github.com/nathantbaker/tabletoptracker">Github</a></p>
+
+            <div class="addthis_inline_share_toolbox"></div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <!-- addthis social share icons -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5886c9fbc212c9de"></script>
+
+  </body>
+</html>

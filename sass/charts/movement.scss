@@ -1,0 +1,126 @@
+
+
+.rankChart #rankDescription {
+  font-size: 1.2em;
+  color: grey;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.rankChart #rankMovement {
+  background: url("/images/icons/arrow-up.png") no-repeat top left;
+  background-size: 40px;
+  color: #333;
+  height: 50px;
+  font-size: 3em;
+  font-weight: 300;
+  padding: 0 0 0 50px;
+  margin: 20px 0 0 25%;
+  line-height: .9em;
+  text-align: left;
+}
+
+.rankChart img {
+  max-width: none;
+  max-height: none;
+}
+
+.rankChart li {
+  list-style-type: none;
+  background-color: white;
+  margin: 0 0 0 -20px;
+  padding: 0;
+}
+
+.progress p {
+  text-align: left;
+  padding-left: 8px;
+  color: white;
+}
+
+.progress  {
+  background-color: white;
+  border-radius: none;
+  box-shadow: none;
+}
+
+.progress-bar {
+  border-radius: 4px;
+}
+
+.negative {
+  margin: 10.1px 0 0 0;
+}
+
+.negative .progress-bar {
+  background-color: $n10;
+  float: right;
+}
+
+.negative .progress-bar p {
+  text-align: right;
+  padding-right: 8px;
+}
+
+.positive {
+  margin: 10.1px 20px 0 5px;
+  position:relative;
+  z-index:5;
+}
+
+.positive .progress-bar {
+  background-color: $n1;
+}
+
+.top-wrapper {
+  padding-top: 2px;
+}
+
+.bottom-wrapper {
+  padding-top: 338px;
+}
+
+.rankChart ol {
+  padding: 10px 0;
+}
+
+#rankColumn ul {
+
+}
+
+.truncate {
+  margin: 0 -60px -.14em 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2em;
+  padding: 0;
+  width: 250px;
+}
+
+#rankColumn {
+  margin: -22px -15px 0 0;
+  line-height: 2.21em;
+}
+
+#rankColumnNegative {
+  height: 20px;
+}
+
+.movementSmallDetails {
+  padding: 8px 0 3px 0;
+}
+
+.up {
+  color: #26BB5D;
+}
+
+.down {
+  color: #D9274B;
+}
+
+.rank {
+  color: grey;
+  padding-left: 10px;
+}

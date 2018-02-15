@@ -1,0 +1,55 @@
+$bgcolor: #ededed;
+$bgcolorDarker: #D9D9D9;
+$n1:  #26BB5D;
+$n10: #D9274B;
+
+/* === Stats === */
+
+.statbox {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Stat: Titles === */
+
+.label-title {
+  font-family: verdana, sans-serif;
+  font-size: 1.16em;
+  margin: 25px 0 15px 0;
+  vertical-align: center;
+  color: black;
+  padding: 7px 7px 7px 12px;
+  border-radius: 8px;
+  background: $bgcolor;
+  border: 1px $bgcolorDarker solid;
+  display: block;
+  text-align: left;
+  z-index: 4;
+  position: relative;
+  opacity: .8;
+}
+
+.label-title strong {
+  font-weight: 600;
+  color: #444;
+}
+
+.label-kpi {
+  font-size: 1.3em;
+}
+
+.kpi {
+  font-size: 4.4em;
+  line-height: 1.2em;
+  padding-top: 20px;
+  color: #3382c4;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.kpi-small {
+  font-size: 3.7em;
+}
+
+/* === Charts === */
+
